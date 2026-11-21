@@ -46,10 +46,10 @@ export default function About() {
   ];
 
   return (
-    <main className="bg-white text-gray-900 transition-colors duration-300 dark:bg-gray-950 dark:text-gray-100">
+    <main className="bg-white text-gray-900 transition-colors duration-300">
 
       {/* Hero Section */}
-      <section className="bg-gray-50 px-6 py-20 transition-colors duration-300 dark:bg-gray-900 md:px-12 lg:px-20">
+      <section className="bg-gray-50 px-6 py-20 transition-colors duration-300">
 
         <div className="mx-auto max-w-5xl text-center">
 
@@ -57,14 +57,14 @@ export default function About() {
             About Hadassah Store
           </p>
 
-          <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 text-4xl leading-tight font-extrabold tracking-tight text-gray-900">
             Shopping Made Simple,
             <span className="block text-green-600">
               Everyday.
             </span>
           </h1>
 
-          <p className="mx-auto max-w-2xl text-base leading-8 text-gray-500 dark:text-gray-400 md:text-lg">
+          <p className="mx-auto max-w-2xl text-base leading-8 text-gray-500">
             Welcome to Hadassah Store, your everyday marketplace
             for fashion, electronics, home essentials, and
             accessories. We bring different shopping needs
@@ -113,24 +113,24 @@ export default function About() {
               Who We Are
             </p>
 
-            <h2 className="mb-6 text-3xl leading-tight font-extrabold text-gray-900 dark:text-white md:text-4xl">
+            <h2 className="mb-6 text-3xl leading-tight font-extrabold text-gray-900">
               More Than Just a Shopping Destination
             </h2>
 
-            <p className="mb-5 leading-8 text-gray-600 dark:text-gray-400">
+            <p className="mb-5 leading-8 text-gray-600">
               Hadassah Store is an online marketplace designed
               to bring everyday shopping categories together
               in one convenient place.
             </p>
 
-            <p className="mb-5 leading-8 text-gray-600 dark:text-gray-400">
+            <p className="mb-5 leading-8 text-gray-600">
               We understand that finding the right products
               should not be complicated. That's why our store
               brings together fashion, electronics, home and
               living essentials, and accessories.
             </p>
 
-            <p className="leading-8 text-gray-600 dark:text-gray-400">
+            <p className="leading-8 text-gray-600">
               Our goal is to create a simple and enjoyable
               shopping experience where customers can explore,
               discover, and find products that suit their needs.
@@ -174,11 +174,11 @@ export default function About() {
               What Matters to Us
             </p>
 
-            <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl">
+            <h2 className="mb-4 text-3xl font-extrabold text-gray-900">
               Our Core Values
             </h2>
 
-            <p className="mx-auto max-w-2xl leading-7 text-gray-500 dark:text-gray-400">
+            <p className="mx-auto max-w-2xl leading-7 text-gray-500">
               The principles behind the shopping experience
               we want to create.
             </p>
@@ -190,18 +190,18 @@ export default function About() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900"
+                className="rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
 
                 <div className="mb-5 text-5xl">
                   {value.icon}
                 </div>
 
-                <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="mb-3 text-xl font-bold text-gray-900">
                   {value.title}
                 </h3>
 
-                <p className="leading-7 text-gray-500 dark:text-gray-400">
+                <p className="leading-7 text-gray-500">
                   {value.description}
                 </p>
 
@@ -214,7 +214,7 @@ export default function About() {
       </section>
 
       {/* Categories Section */}
-      <section className="bg-gray-50 px-6 py-20 dark:bg-gray-900 md:px-12 lg:px-20">
+      <section className="bg-gray-50 px-6 py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -224,11 +224,11 @@ export default function About() {
               Explore Our Store
             </p>
 
-            <h2 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl">
+            <h2 className="mb-4 text-3xl font-extrabold text-gray-900">
               Something for Everyone
             </h2>
 
-            <p className="mx-auto max-w-2xl text-gray-500 dark:text-gray-400">
+            <p className="mx-auto max-w-2xl text-gray-500">
               Explore our different shopping categories and
               discover products for your everyday needs.
             </p>
@@ -241,18 +241,18 @@ export default function About() {
               <Link
                 to="/products"
                 key={category.name}
-                className="rounded-xl border border-gray-100 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950"
+                className="rounded-xl border border-gray-100 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-lg"
               >
 
                 <span className="text-5xl">
                   {category.icon}
                 </span>
 
-                <h3 className="mb-2 mt-4 font-bold text-gray-900 dark:text-white">
+                <h3 className="mb-2 mt-4 font-bold text-gray-900">
                   {category.name}
                 </h3>
 
-                <p className="text-sm leading-6 text-gray-500 dark:text-gray-400">
+                <p className="text-sm leading-6 text-gray-500">
                   {category.description}
                 </p>
 
@@ -269,11 +269,11 @@ export default function About() {
 
         <div className="mx-auto max-w-3xl">
 
-          <h2 className="mb-5 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl">
+          <h2 className="mb-5 text-3xl font-extrabold text-gray-900">
             Ready to Discover Something Great?
           </h2>
 
-          <p className="mb-8 leading-7 text-gray-500 dark:text-gray-400">
+          <p className="mb-8 leading-7 text-gray-500">
             Explore Hadassah Store and find products that make
             everyday shopping more enjoyable.
           </p>
