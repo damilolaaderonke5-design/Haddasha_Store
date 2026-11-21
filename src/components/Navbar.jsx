@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  
-
   function closeMenu() {
     setMenuOpen(false);
   }
@@ -17,8 +15,9 @@ export default function Navbar() {
     { name: "Contact", path: "/contact" },
   ];
 
+
   return (
-    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm transition-colors duration-300 dark:border-gray-800 dark:bg-gray-950">
+    <header className="sticky top-0 z-50 border-b border-gray-100 bg-white shadow-sm transition-colors duration-300">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-10">
 
         {/* Logo */}
@@ -57,8 +56,7 @@ export default function Navbar() {
           </div>
 
           <div>
-            <h1 className="text-lg font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-xl">
-              Hadassah<span className="text-green-600">.</span>
+            <h1 className="text-lg font-extrabold tracking-tight text-gray-900"> Hadassah
             </h1>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-gray-400">
               STORE
@@ -72,7 +70,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               to={link.path}
-              className="text-sm font-semibold text-gray-600 transition hover:text-green-600 dark:text-gray-300 dark:hover:text-green-400"
+              className="text-sm font-semibold text-gray-600 transition hover:text-green-600"
             >
               {link.name}
             </Link>
@@ -87,7 +85,7 @@ export default function Navbar() {
             to="/favourites"
             aria-label="My favourites"
             title="My favourites"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition hover:bg-green-50 hover:text-green-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-green-400"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition hover:bg-green-50 hover:text-green-600"
           >
             <svg
               viewBox="0 0 24 24"
@@ -109,7 +107,7 @@ export default function Navbar() {
             to="/cart"
             aria-label="Shopping cart"
             title="Shopping cart"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition hover:bg-green-50 hover:text-green-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-green-400"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 transition hover:bg-green-50 hover:text-green-600"
           >
             <svg
               viewBox="0 0 24 24"
@@ -128,20 +126,14 @@ export default function Navbar() {
             </svg>
           </Link>
 
-          
-
           <Link
             to="/login"
-            className="rounded-lg px-4 py-2.5 text-sm font-semibold text-gray-700 transition hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
-          >
-            Sign In
+            className="rounded-lg px-4 py-2.5 text-sm font-semibold bg-amber-50 text-green-700 transition hover:bg-gray-100"> Sign In
           </Link>
 
           <Link
             to="/register"
-            className="rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-green-700"
-          >
-            Sign Up
+            className="rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-gray-400">Sign Up
           </Link>
         </div>
 
@@ -151,7 +143,7 @@ export default function Navbar() {
           <Link
             to="/favourites"
             aria-label="My favourites"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-green-400"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600"
           >
             <svg
               viewBox="0 0 24 24"
@@ -171,7 +163,7 @@ export default function Navbar() {
           <Link
             to="/cart"
             aria-label="Shopping cart"
-            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-green-400"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600"
           >
             <svg
               viewBox="0 0 24 24"
@@ -198,7 +190,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-800 transition hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+            className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-800 transition hover:bg-gray-100"
           >
             {menuOpen ? (
               <svg
@@ -229,7 +221,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="border-t border-gray-100 bg-white px-6 py-5 shadow-lg dark:border-gray-800 dark:bg-gray-950 lg:hidden">
+        <div className="border-t border-gray-100 bg-white px-6 py-5 shadow-lg">
           <div className="flex flex-col gap-2">
 
             {navLinks.map((link) => (
@@ -237,18 +229,18 @@ export default function Navbar() {
                 key={link.name}
                 to={link.path}
                 onClick={closeMenu}
-                className="rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-green-50 hover:text-green-600 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-green-400"
+                className="rounded-lg px-4 py-3 font-medium text-gray-700 transition hover:bg-green-50 hover:text-green-600"
               >
                 {link.name}
               </Link>
             ))}
 
-            <div className="my-2 border-t border-gray-100 dark:border-gray-800" />
+            <div className="my-2 border-t border-gray-100" />
 
             <Link
               to="/login"
               onClick={closeMenu}
-              className="rounded-lg px-4 py-3 text-center font-semibold text-gray-700 transition hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800"
+              className="rounded-lg px-4 py-3 text-center font-semibold text-gray-700 transition hover:bg-gray-100"
             >
               Sign In
             </Link>
@@ -256,7 +248,7 @@ export default function Navbar() {
             <Link
               to="/register"
               onClick={closeMenu}
-              className="rounded-lg bg-green-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-green-700"
+              className="rounded-lg bg-green-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-gray-700"
             >
               Sign Up
             </Link>

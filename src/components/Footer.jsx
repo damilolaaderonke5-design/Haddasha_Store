@@ -102,28 +102,23 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
             <li>
-              <Link to="/contact" className="transition hover:text-green-400">
-                Help Center
-              </Link>
-            </li>
+              
+                <Link
+                  to="/contact?view=support"
+                  className="flex items-center gap-3 transition hover:text-green-400"
+                >
+                  <i className="fa-solid fa-circle-question text-green-500"></i>
+                  Help Center
+                </Link>
+              </li>
 
-            <li>
-              <Link to="/contact" className="transition hover:text-green-400">
-                Shipping Information
-              </Link>
-            </li>
+                <li>
+                  Shipping Information
+                </li>
 
-            <li>
-              <Link to="/contact" className="transition hover:text-green-400">
-                Returns & Refunds
-              </Link>
-            </li>
-
-            <li>
-              <Link to="/contact" className="transition hover:text-green-400">
-                Customer Enquiries
-              </Link>
-            </li>
+                <li>
+                  Returns & Refunds
+                </li>
           </ul>
         </div>
 
