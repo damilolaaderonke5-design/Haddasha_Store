@@ -16,8 +16,11 @@ const categoryFromUrl = searchParams.get("category");
   const [sortBy, setSortBy] = useState("default");
 
   const categories = [
-    "all",
-    ...new Set(products.map((product) => product.category)),
+    { value: "all", label: "All Categories" },
+    { value: "men's clothing", label: "Men's Clothing" },
+    { value: "women's clothing", label: "Women's Clothing" },
+    { value: "electronics", label: "Electronics" },
+    { value: "jewelery", label: "Jewellery" },
   ];
 
   // Filter products by search and category
@@ -117,8 +120,8 @@ const categoryFromUrl = searchParams.get("category");
           className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 outline-none focus:border-green-600"
         >
           {categories.map((category) => (
-            <option key={category} value={category}>
-              {category === "all" ? "All Categories" : category}
+            <option key={category.value} value={category.value}>
+              {category.label}
             </option>
           ))}
         </select>
