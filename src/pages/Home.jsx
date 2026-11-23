@@ -54,10 +54,26 @@ const [selectedCategory, setSelectedCategory] = useState("all");
 const [sortBy, setSortBy] = useState("default");
 
 const categories = [
-{ name: "Fashion", icon: "👕" },
-{ name: "Electronics", icon: "🎧" },
-{ name: "Home & Living", icon: "🏠" },
-{ name: "Accessories", icon: "⌚" },
+  {
+    name: "Men's Clothing",
+    icon: "👔",
+    slug: "men's clothing",
+  },
+  {
+    name: "Women's Clothing",
+    icon: "👗",
+    slug: "women's clothing",
+  },
+  {
+    name: "Electronics",
+    icon: "🎧",
+    slug: "electronics",
+  },
+  {
+    name: "Jewelery",
+    icon: "💍",
+    slug: "jewelery",
+  },
 ];
 
 // Get available categories from the API
@@ -200,9 +216,9 @@ return (
 
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
       {categories.map((category) => (
-        <Link
-          to="/products"
-          key={category.name}
+          <Link
+            to={`/products?category=${encodeURIComponent(category.slug)}`}
+            key={category.slug}
           className="rounded-xl border border-gray-100 p-6 text-center transition hover:-translate-y-1 hover:shadow-lg md:p-8"
         >
           <span className="text-4xl">{category.icon}</span>

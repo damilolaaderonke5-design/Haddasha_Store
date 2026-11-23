@@ -29,36 +29,34 @@ export default function Footer() {
 
           {/* Social Links */}
           <div className="mt-6 flex gap-3">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white transition hover:bg-green-600"
+            <span
+              aria-label="Facebook profile not yet available"
+              title="Facebook profile coming soon"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white opacity-70"
             >
               <i className="fa-brands fa-facebook-f"></i>
-            </a>
+            </span>
 
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Instagram"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white transition hover:bg-green-600"
+            <span
+              aria-label="Instagram profile not yet available"
+              title="Instagram profile coming soon"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white opacity-70"
             >
               <i className="fa-brands fa-instagram"></i>
-            </a>
+            </span>
 
-            <a
-              href="https://x.com/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="X"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white transition hover:bg-green-600"
+            <span
+              aria-label="X profile not yet available"
+              title="X profile coming soon"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 font-bold text-white opacity-70"
             >
               <i className="fa-brands fa-x-twitter"></i>
-            </a>
+            </span>
           </div>
+
+          <p className="mt-3 text-xs text-gray-500">
+            Follow us on social media — links coming soon.
+          </p>
         </div>
 
         {/* Quick Links */}
@@ -102,23 +100,34 @@ export default function Footer() {
 
           <ul className="space-y-3 text-sm">
             <li>
-              
-                <Link
-                  to="/contact?view=support"
-                  className="flex items-center gap-3 transition hover:text-green-400"
-                >
-                  <i className="fa-solid fa-circle-question text-green-500"></i>
-                  Help Center
-                </Link>
-              </li>
+              <Link
+                to="/contact?view=support"
+                className="flex items-center gap-3 transition hover:text-green-400"
+              >
+                <i className="fa-solid fa-circle-question text-green-500"></i>
+                Help Center
+              </Link>
+            </li>
 
-                <li>
-                  Shipping Information
-                </li>
+            <li>
+              <Link
+                to="/shipping"
+                className="flex items-center gap-3 transition hover:text-green-400"
+              >
+                <i className="fa-solid fa-truck text-green-500"></i>
+                Shipping Information
+              </Link>
+            </li>
 
-                <li>
-                  Returns & Refunds
-                </li>
+            <li>
+              <Link
+                to="/returnRefund"
+                className="flex items-center gap-3 transition hover:text-green-400"
+              >
+                <i className="fa-solid fa-rotate-left text-green-500"></i>
+                Returns & Refunds
+              </Link>
+            </li>
           </ul>
         </div>
 

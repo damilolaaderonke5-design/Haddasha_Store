@@ -24,24 +24,28 @@ export default function About() {
 
   const categories = [
     {
-      icon: "👕",
-      name: "Fashion",
+     name: "Men's Clothing",
+      icon: "👔",
+      slug: "men's clothing",
       description: "Discover styles for your everyday look.",
     },
     {
-      icon: "🎧",
       name: "Electronics",
+      icon: "🎧",
+      slug: "electronics",
       description: "Explore gadgets and electronic essentials.",
     },
     {
-      icon: "🏠",
-      name: "Home & Living",
-      description: "Find useful products for your living space.",
+      name: "Jewelery",
+      icon: "💍",
+      slug: "jewelery",
+      description: "Complete your style with everyday accessories.",
     },
     {
-      icon: "⌚",
-      name: "Accessories",
-      description: "Complete your style with everyday accessories.",
+      name: "Women's Clothing",
+      icon: "👗",
+      slug: "women's clothing",
+      description: "Discover styles for your everyday look.",
     },
   ];
 
@@ -239,8 +243,8 @@ export default function About() {
 
             {categories.map((category) => (
               <Link
-                to="/products"
-                key={category.name}
+              to={`/products?category=${encodeURIComponent(category.slug)}`}
+              key={category.slug}
                 className="rounded-xl border border-gray-100 bg-white p-7 text-center transition hover:-translate-y-1 hover:shadow-lg"
               >
 

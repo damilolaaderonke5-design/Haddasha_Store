@@ -56,8 +56,9 @@ export default function Navbar() {
           </div>
 
           <div>
-            <h1 className="text-lg font-extrabold tracking-tight text-gray-900"> Hadassah
-            </h1>
+            <h1 className="text-lg font-extrabold tracking-tight text-gray-900">
+            Hadassah
+          </h1>
             <p className="text-[10px] font-semibold tracking-[0.2em] text-gray-400">
               STORE
             </p>
@@ -128,12 +129,12 @@ export default function Navbar() {
 
           <Link
             to="/login"
-            className="rounded-lg px-4 py-2.5 text-sm font-semibold bg-amber-50 text-green-700 transition hover:bg-gray-100"> Sign In
+            className="rounded-lg bg-green-50 px-4 py-2.5 text-sm font-semibold text-green-700 transition hover:bg-green-100"> Sign In
           </Link>
 
           <Link
             to="/register"
-            className="rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-gray-400">Sign Up
+            className="rounded-lg bg-green-600 px-4 py-3 text-center font-semibold text-white transition hover:bg-green-700">Sign Up
           </Link>
         </div>
 
@@ -142,6 +143,7 @@ export default function Navbar() {
 
           <Link
             to="/favourites"
+            onClick={closeMenu}
             aria-label="My favourites"
             className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600"
           >
@@ -162,6 +164,7 @@ export default function Navbar() {
 
           <Link
             to="/cart"
+            onClick={closeMenu}
             aria-label="Shopping cart"
             className="flex h-10 w-10 items-center justify-center rounded-full text-gray-600 hover:bg-green-50 hover:text-green-600"
           >

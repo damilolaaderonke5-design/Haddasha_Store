@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
-
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -14,6 +12,9 @@ import CartProvider from "./context/CartContext";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+import Shipping from "./pages/Shipping";
+import ReturnRefund from "./pages/ReturnRefund";
 import Footer from "./components/Footer";
 
 
@@ -44,6 +45,12 @@ return (
       <Route path="/login" element={<Login />} />
       
       <Route path="/register" element={<Register />} />
+
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+
+      <Route path="/shipping" element={<Shipping />} />
+
+      <Route path="/returnRefund" element={<ReturnRefund />} />
     </Routes>
 
     <Footer />

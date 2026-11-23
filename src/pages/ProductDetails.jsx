@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import api from "../services/api";
 import { useCart } from "../context/CartContext";
 import { useFavorites } from "../context/FavoritesContext";
+import { formatNaira } from "../utils/currency";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -93,13 +94,12 @@ export default function ProductDetails() {
       </Link>
 
       <section className="grid gap-10 md:grid-cols-2 md:gap-14">
-
         {/* Product Image */}
         <div className="flex `min-h-[400px]` items-center justify-center rounded-2xl bg-gray-50 p-8 md:`min-h-[500px]`">
           <img
             src={product.image}
             alt={product.title}
-            className="h-full `max-h-[420px]` w-full object-contain"
+            className="`max-h-[420px]` w-full object-contain"
           />
         </div>
 
@@ -113,6 +113,7 @@ export default function ProductDetails() {
             {product.title}
           </h1>
 
+          {/* Product Rating */}
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className="text-xl text-amber-500">★</span>
 
@@ -125,10 +126,12 @@ export default function ProductDetails() {
             </span>
           </div>
 
+          {/* Product Price in Naira */}
           <p className="mb-6 text-3xl font-extrabold text-gray-900">
-            ${Number(product.price).toFixed(2)}
+            {formatNaira(product.price)}
           </p>
 
+          {/* Product Description */}
           <p className="mb-8 leading-8 text-gray-600">
             {product.description}
           </p>
@@ -156,6 +159,7 @@ export default function ProductDetails() {
             </button>
           </div>
 
+          {/* Additional Information */}
           <div className="mt-8 border-t border-gray-100 pt-6">
             <p className="text-sm text-gray-500">
               ✓ Product details and ratings provided by our demo API.
